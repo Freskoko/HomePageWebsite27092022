@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{title}}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}" />
+
+    <style>
+      a { text-decoration: none; }
+    </style>
+
+</head>
+
+<div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="/contact/">Contact</a>
+    <a href="/about/">About</a>
+  </div>
+
+
+
+  <body>
+    <h1>Contact info: </h1>
+    <div id="container">
+     
+        <div id="boxelement">
+          <a class="active" href="https://github.com/Freskoko">Github</a>
+        </div>
+
+        <div id="boxelement">
+          <p>Mail: henrik@brogger.no / frishcoco@gmail.com</p>
+        </div>
+
+        <div id="boxelement">
+            <p>TLF: +47 94262746</p>
+        </div>
+        
+    </div>
+    
+  </body>
+
+
+
+
+<footer>
+    <svg viewBox="0 -20 700 110" width="120%" height="130" preserveAspectRatio="none">
+      <path transform="translate(0, -30)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#EE82EE" />
+      <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#8B008B" />
+    </svg>
+  </footer>
+
+</html>

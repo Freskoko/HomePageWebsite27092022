@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Species viewer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='speciesviewer.css') }}" />
+
+    <style>
+      a { text-decoration: none; }
+    </style>
+
+</head>
+
+<div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="/contact/">Contact</a>
+    <a href="/about/">About</a>
+  </div>
+
+  <body>
+    <h1> Species viewer </h1>
+
+    <div id = "formcontainer">
+      <div id="forms">
+        <form action="/speciesviewer/" method="POST" enctype="multipart/form-data">
+
+        {% for item in newspecieslist %}
+
+        <div>
+          
+          <img src= /static/upload/{{ item[4] }} title = {{ item[0] }} width="300" height="300" />
+          <div>
+            <var>{{ item[0] }}</var>   
+          </div>
+          
+
+        </div>
+
+
+        <div style li="Bolder">
+        <ul>
+            <li> Name </li>
+            {{ item[0] }}
+            <li> Location </li>
+            {{ item[1] }}
+            <li> Size      </li>
+            {{ item[2] }}
+            <li> Date      </li>
+            {{ item[3] }}
+            <h1> --------------- </h1>
+
+
+
+        </ul>
+        </div>
+        {% endfor %}
+
+        </form>
+
+      </div>
+  </div>
+
+    
+  </body>
+
+
+
+
+<footer>
+    <svg viewBox="0 -20 700 110" width="120%" height="130" preserveAspectRatio="none">
+      <path transform="translate(0, -30)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#EE82EE" />
+      <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#8B008B" />
+    </svg>
+  </footer>
+
+</html>
