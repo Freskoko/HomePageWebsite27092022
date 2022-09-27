@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+
+<head>
+  <title>?DRINK?</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='mystery.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='drikke.css') }}" />
+
+  <style>
+    a { text-decoration: none; }
+  </style>
+
+</head>
+
+<body>
+  
+
+  
+  <div id="dimScreen">
+    <div id="gradient"></div>
+  </div>
+
+  <div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="/contact/">Contact</a>
+    <a href="/about/">About</a>
+  </div>
+
+
+  <h3>@Freskoko</h3>
+  {% if result %} 
+
+        <div class="result">{{ result }}</div>
+      
+  {% endif %}
+
+  <form action="/drikke/" method="POST">
+    <div style = "position:relative; top:350px; ;"></div>
+    <input type="submit" name = "new" value="New challenge" />
+
+  </form>
+  {% if dice %} 
+  <form action="/drikke/" method="POST" enctype="multipart/form-data">
+
+    {% if progBarHtml %} 
+
+    <progress name = "progressbar" max = "50" value = {{ progBarHtml }} ></progress>
+
+    {% endif %}
+  
+    <input type="submit" name = "dicerollbutton" value={{ dice }} >
+    
+  </form>
+  {% endif %}
+
+
+
+  <form action="/drikke/" method="POST">
+    <div style = "position:relative; top:0px; ;">
+    <input type="text" name="addplayer" placeholder="Write names" />
+    <input type="submit" name = "addplayerbutton" value="Add name" />
+    <input type="submit" name = "clear" value="Clear all names" />
+  </form>
+
+</body>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Species form</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='speciesform.css') }}" />
+
+    <style>
+      a { text-decoration: none; }
+    </style>
+
+</head>
+
+<div class="topnav">
+    <a class="active" href="/">Home</a>
+    <a href="/contact/">Contact</a>
+    <a href="/about/">About</a>
+  </div>
+
+  <body>
+    <h1> Species form </h1>
+
+    <!-- <div id="bigcontainer">
+        
+      {% if session[crazy] == true %}
+
+        <div>True</div>
+
+      {% else %}
+
+        <div>False</div>  
+
+      {% endif %}
+
+      {{session["crazyvalue"] }}
+
+    </div> -->
+
+    <!-- <div id="containerbutton">
+
+        <form action="/speciesform/" method="POST" >
+  
+            <input type="submit" name = "buttonTurn" value= yes > 
+            <input type="submit" name = "buttonTurn2" value= no > 
+
+        </form>
+
+    </div> -->
+
+    <div id = "formcontainer">
+      <div id="forms">
+        <form action="/speciesform/" method="POST" enctype="multipart/form-data">
+
+          {% for item in forms %}
+            <li>  <input type="text" name =  {{ item }}  value= {{ item }} >  {{ item }} </li>
+          {% endfor %}
+          
+          <div style="margin-top: 50px;">
+          <label for="file" class="btn" id = "filelabel" display:none>Submit jpg of species</label>
+          </div>
+
+          <input type = "file" name = "Image" />
+
+          <div style="margin-top: 50px;">
+          <input type="submit" name = "SUBMITREPORT" value= "Submit species to database!" > 
+        </div>
+
+        </form>
+
+
+      </div>
+  </div>
+
+    
+  </body>
+
+
+
+
+<footer>
+    <svg viewBox="0 -20 700 110" width="120%" height="130" preserveAspectRatio="none">
+      <path transform="translate(0, -30)" d="M0,10 c80,-22 240,0 350,18 c90,17 260,7.5 350,-20 v50 h-700" fill="#EE82EE" />
+      <path d="M0,10 c80,-18 230,-12 350,7 c80,13 260,17 350,-5 v100 h-700z" fill="#8B008B" />
+    </svg>
+  </footer>
+
+</html>

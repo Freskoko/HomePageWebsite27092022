@@ -1,0 +1,2 @@
+['Larus Fuscus', 'Bryggen', 'Large (adult)', '8/7/2022', 'LMQHQUSJ6N.jpg'] 
+['Larus canus', 'Nygårdsparken', 'Medium ', '11/07/2022', '80V4809C7L.jpg'] 
